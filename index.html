@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outlet Performance</title>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Outlet performance</h1>
+      <div class="sub" id="subLine">All outlets · weeks of 7 Sept – 21 Sept</div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-outlet="All">All</button>
+      <button class="tab" data-outlet="Tampines">Tampines</button>
+      <button class="tab" data-outlet="Jurong">Jurong</button>
+      <button class="tab" data-outlet="Orchard">Orchard</button>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="card kpi-card hero">
+      <div class="kpi-label">Total Sales</div>
+      <div class="kpi-value" id="kpiSales">-</div>
+      <div class="kpi-sub" id="kpiSalesSub">-</div>
+    </div>
+    <div class="card kpi-card">
+      <div class="kpi-label">% of Target</div>
+      <div class="kpi-value" id="kpiTarget">-</div>
+      <div class="kpi-sub" id="kpiTargetSub">-</div>
+    </div>
+    <div class="card kpi-card">
+      <div class="kpi-label">Orders</div>
+      <div class="kpi-value" id="kpiOrders">-</div>
+      <div class="kpi-sub" id="kpiOrdersSub">-</div>
+    </div>
+    <div class="card kpi-card">
+      <div class="kpi-label">Returns</div>
+      <div class="kpi-value" id="kpiReturns">-</div>
+      <div class="kpi-sub" id="kpiReturnsSub">-</div>
+    </div>
+  </div>
+
+  <div class="grid-main">
+    <section class="card">
+      <div class="panel-head"><h2>Sales as % of target</h2></div>
+      <div class="panel-sub">One bar per outlet-week</div>
+      <div class="chart" id="chart"></div>
+      <div class="legend">
+        <span><i class="swatch ok"></i>90% or above</span>
+        <span><i class="swatch bad"></i>Below 90%</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="panel-head"><h2>Needs attention</h2></div>
+      <div class="panel-sub">Outlet-weeks under 90% of target</div>
+      <div class="attention-list" id="attentionList"></div>
+    </section>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
